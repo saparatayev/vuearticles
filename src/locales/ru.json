@@ -1,0 +1,24 @@
+{
+    "articles":"Статьи",
+    "home":"Домашний кoмпонент",
+    "signin": {
+        "signin":"Войти"
+    },
+    "password":"Пароль",
+    "signup": {
+        "signup":"Регистрация",
+        "username":"Имя",
+        "confirmPassword":"Подтвердить пароль"
+    },
+    "contentnewquote":"Содержание",
+    "submit":"Сохранить",
+    "edit":"Редактировать",
+    "delete":"Удалить",
+    "about":"О нас",
+    "articles_vuex":"Статьи_vuex",
+    "secure":"Защищено",
+    "logout":"Выйти",
+    "title":"Название",
+    "body":"Содержание",
+    "page":"Страница"
+}
