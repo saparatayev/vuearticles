@@ -1,3 +1,24 @@
 {
-  "message": "hello i18n !!"
+    "articles":"Articles",
+    "home":"Home component",
+    "signin": {
+        "signin":"Signin"
+    },
+    "signup": {
+        "signup":"Signup",
+        "username":"Username",
+        "confirmPassword":"Confirm password"
+    },
+    "password":"Password",
+    "contentnewquote":"Content",
+    "submit":"Submit",
+    "edit":"Edit",
+    "delete":"Delete",
+    "about":"About",
+    "articles_vuex":"Articles_vuex",
+    "secure":"Secure",
+    "logout":"Logout",
+    "title":"Title",
+    "body":"Body",
+    "page":"Page"
 }

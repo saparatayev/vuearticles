@@ -1,5 +1,4 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createWebHistory, createRouter } from "vue-router";
 import store from './store/store.js'
 import Signin from './components/Signin.vue'
 import Signup from './components/Signup.vue'
@@ -10,17 +9,20 @@ import Articles from './components/Articles';
 import Articlesvuex from './components/Articlesvuex';
 import i18n from './i18n.js'
 
-Vue.use(VueRouter);
 
-let router = new VueRouter({
-    mode: 'history',
+let router = createRouter({
+    history: createWebHistory(),
     routes: [
         {
             path: '',
             redirect: `/${i18n.locale}`
         },
         {
-            path:'*',
+            path:'/:pathMatch(.*)*',
+            redirect: `/${i18n.locale}`
+        },
+        {
+            path:'/:pathMatch(.*)',
             redirect: `/${i18n.locale}`
         },
         {

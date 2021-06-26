@@ -1,19 +1,16 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
+import Navbar from './components/Navbar.vue'
 import i18n from './i18n'
 import store from './store/store.js'
 import Axios from 'axios'
-import Routes from './routes';
+import router from './routes';
 
+const app = createApp(App).use(i18n).use(store).use(router)
 
-Vue.prototype.$http = Axios;
+app.component('navbar', Navbar);
 
-const token = localStorage.getItem('token')
-if (token) {
-    Vue.prototype.$http.defaults.headers.common['Authorization'] = token
-}
-
-Routes.beforeEach((to,from,next) => {
+router.beforeEach((to,from,next) => {
     let language = to.params.lang;
     
     if(!language) {
@@ -25,9 +22,14 @@ Routes.beforeEach((to,from,next) => {
     next()
 })
 
-new Vue({
-    store,
-    router: Routes,
-    i18n,
-    render: h => h(App)
-}).$mount('#app')
+
+
+app.config.globalProperties.$http= Axios
+
+const token = localStorage.getItem('token')
+if (token) {
+    app.config.globalProperties.$http.defaults.headers.common['Authorization'] = token
+}
+
+
+app.mount('#app')
