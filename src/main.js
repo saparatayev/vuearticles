@@ -12,19 +12,6 @@ const app = createApp(App).use(i18n).use(store).use(router)
 app.component('navbar', Navbar);
 app.component('spinner', Spinner);
 
-router.beforeEach((to,from,next) => {
-    let language = to.params.lang;
-    
-    if(!language) {
-      language = 'en'
-    }
-  
-    i18n.locale = language
-  
-    next()
-})
-
-
 
 app.config.globalProperties.$http= Axios
 

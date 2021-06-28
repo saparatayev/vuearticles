@@ -3,26 +3,26 @@
             <div class="container-fluid">
                 <ul class="nav">
                     <li class="nav-item">
-                        <router-link tag="a" :to="`/${$i18n.locale}`" class="navbar-brand">Restfulapi</router-link>
+                        <router-link tag="a" :to="`/`" class="navbar-brand">Restfulapi</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link tag="a" :to="`/${$i18n.locale}/about`" class="nav-link text-light">{{ $t('about') }}</router-link>
+                        <router-link tag="a" :to="`/about`" class="nav-link text-light">{{ $t('about') }}</router-link>
                     </li>
                     <!-- <li class="nav-item">
                         <router-link tag="a" :to="`/${$i18n.locale}/articles`" class="nav-link text-light">{{ $t('articles') }}</router-link>
                     </li> -->
                     <li class="nav-item">
-                        <router-link tag="a" :to="`/${$i18n.locale}/articlesvuex`" class="nav-link text-light">{{ $t('articles_vuex') }}</router-link>
+                        <router-link tag="a" :to="`/articlesvuex`" class="nav-link text-light">{{ $t('articles_vuex') }}</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link tag="a" :to="`/${$i18n.locale}/secure`" class="nav-link text-light">{{ $t('secure') }}</router-link>
+                        <router-link tag="a" :to="`/secure`" class="nav-link text-light">{{ $t('secure') }}</router-link>
                     </li>
                     <template v-if="!isLoggedIn">
                         <li class="nav-item">
-                            <router-link tag="a" :to="`/${$i18n.locale}/signup`" class="nav-link text-light">{{ $t('signup.signup') }}</router-link>
+                            <router-link tag="a" :to="`/signup`" class="nav-link text-light">{{ $t('signup.signup') }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link tag="a" :to="`/${$i18n.locale}/signin`" class="nav-link text-light">{{ $t('signin.signin') }}</router-link>
+                            <router-link tag="a" :to="`/signin`" class="nav-link text-light">{{ $t('signin.signin') }}</router-link>
                         </li>
                     </template>
                     <template v-else>
